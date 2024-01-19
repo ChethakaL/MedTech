@@ -20,7 +20,7 @@ const RegisterScreen = () => {
 
   const handlePress = async () => {
     try {
-      const response = await axios.post('http://172.20.10.5:4000/api/user/', {
+      const response = await axios.post('https://api.medtechs.xyz/api/user/', {
         fname,
         lname,
         age,

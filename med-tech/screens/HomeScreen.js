@@ -29,7 +29,7 @@ const HomeScreen = () => {
   useEffect(() => {
     const fetchNearbyHospitals = async () => {
       try {
-        const response = await axios.get('http://192.168.1.189:4000/api/map/all');
+        const response = await axios.get('https://api.medtechs.xyz/api/map/all');
         setMarkers(response.data);
       } catch (error) {
         console.error('Error fetching nearby hospitals:', error.message);
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
         height:'90%',
         marginTop: 20,
         backgroundColor:'red',
-        borderTopLeftRadius:'70px',
+        borderTopLeftRadius: Platform.OS === 'ios' ? 10 : 0,
       },
       searchBtn:{
         width:60,

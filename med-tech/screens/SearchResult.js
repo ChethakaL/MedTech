@@ -19,7 +19,7 @@ const SearchResult = () => {
   useEffect(() => {
     const fetchSearchResults = async () => {
       try {
-        const response = await axios.get(`http://192.168.1.189:4000/api/map/search/${query}`);
+        const response = await axios.get(`https://api.medtechs.xyz/api/map/search/${query}`);
         setSearchResults(response.data);
       } catch (error) {
         console.error('Error fetching search results:', error.message);

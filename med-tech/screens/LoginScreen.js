@@ -13,7 +13,7 @@ const LoginScreen = () => {
 
   const handlePress = async () => {
     try {
-      const response = await axios.post('http://192.168.1.189:4000/api/user/login', {
+      const response = await axios.post('https://api.medtechs.xyz/api/user/login', {
         username,
         password,
       });
