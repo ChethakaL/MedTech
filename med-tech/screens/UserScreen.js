@@ -22,7 +22,7 @@ const UserScreen = () => {
     try {
       // Retrieve the token from AsyncStorage
       const token = await AsyncStorage.getItem('userToken');
-
+      console.log(token);
       const response = await axios.get('https://api.medtechs.xyz/api/user/profile', {
         headers: {
           Authorization: `Bearer ${token}`,
