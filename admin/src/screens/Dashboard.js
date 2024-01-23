@@ -7,7 +7,7 @@ function Dashboard() {
     // Fetch data from the backend when the component mounts
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/map/all');
+        const response = await fetch('https://api.medtechs.xyz/api/map/all');
         if (response.ok) {
           const data = await response.json();
           setHospitalData(data);
@@ -46,7 +46,7 @@ function Dashboard() {
                 <td>{equipment.availableFrom}</td>
                 <td>{equipment.availableTo}</td>
                 <td>{equipment.testPrice}</td>
-                <td>Action</td>
+                <td><a>Delete</a></td>
               </tr>
             ))
           )}

@@ -43,7 +43,7 @@ function Add() {
         testPrice: machine.price, // Assuming this is the correct field name
       }));
   
-      const response = await fetch('http://localhost:4000/api/map', {
+      const response = await fetch('https://api.medtechs.xyz/api/map', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
