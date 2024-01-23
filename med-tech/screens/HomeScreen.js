@@ -14,7 +14,14 @@ const HomeScreen = () => {
 
   const handleMarker = (marker) => {
     setSelectedMarker(marker);
-    navigation.navigate('Result', { marker });
+
+    const {latitude, longitude} = marker.location;
+
+    // Log for debugging
+    console.log('Latitude:', latitude);
+    console.log('Longitude:', longitude);
+
+    navigation.navigate('Result', { latitude, longitude, marker });
   };
 
   const handleSearch = () => {
