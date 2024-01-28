@@ -24,9 +24,9 @@ function Dashboard() {
 
   return (
     <div className='background'>
-      <h2>Read and Update Table</h2>
+      <h2 class="heading-text">Read and Update Table</h2>
 
-      <table className="ui basic table">
+      <table class="container">
         <thead>
           <tr>
             <th>Hospital Name</th>
